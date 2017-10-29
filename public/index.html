@@ -1,0 +1,109 @@
+
+,<html lang="pt-br" ng-app="homesmarthome">
+    <meta charset="UTF-8">
+    <title>Home, Smart Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script>
+   var app = angular.module('homesmarthome', []);
+        var socket = io();
+
+        app.controller('sensor', ['$scope', function($scope){
+            socket.on('leitura', function(leitura){
+                $scope.$apply(function(){
+                   $scope.tempAgua = leitura;
+                });
+            });
+        }])
+
+          /*app.controller('sensor', ['$scope', function($scope){
+            socket.on('leituraAgua', function(leitura2){
+                $scope.$apply(function(){
+                   $scope.dadoAgua = leitura2;
+
+                    if(dadoAgua = "SEM AGUA"){
+                        alert("SEM AGUA");
+                        document.getElementById('gg') = <img class="jardim1" id="gg" src="assets/img/jardimsemagua.png">;
+                    }else{
+                        document.getElementById('gg') = <img class="jardim1" id="gg" src="assets/img/jardim2.png">;
+                        alert("COM AGUA");
+                    }
+                });
+            });
+        }])*/
+
+
+
+    </script>
+	<head>
+		<meta charset="UTF-8">
+		<title>My Smart Home</title>
+		<link href="assets/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+	<script type="text/javascript">
+		function banheiro(){
+			var str = document.getElementById("rr").src;
+
+			if(str.match("assets/img/banheiro2.png")){
+		  	document.getElementById("rr").src="assets/img/banheiro1.png";
+
+			}else{
+				document.getElementById("rr").src="assets/img/banheiro2.png";
+
+
+			}
+		}
+
+		function jardim(){
+			var str = document.getElementById("gg").src;
+
+			if(str.match("assets/img/jardim2.png")){
+		  	document.getElementById("gg").src="assets/img/jardim1.png";
+
+			}else{
+				document.getElementById("gg").src="assets/img/jardim2.png";
+
+			}
+		}
+
+		function piscina(){
+			var str = document.getElementById("yy").src;
+
+			if(str.match("assets/img/piscina2.png")){
+		  	document.getElementById("yy").src="assets/img/piscina1.png";
+
+			}else{
+				document.getElementById("yy").src="assets/img/piscina2.png";
+
+			}
+		}
+
+	</script>
+
+	<button class="banheiro1" onclick="banheiro();"><img class="banheiro1" id="rr" src="assets/img/banheiro2.png"></button>
+
+
+  <div ng-controller="sensor">
+      <p class="temperatura" id="temperaturaAgua">{{tempAgua}} C</p>
+  </div>
+
+
+	<div class="btn-group">
+		 <button class="btTemperatura1" id="rgbF">fria</button>
+		 <button class="btTemperatura2" id="rgbMF">meio fria</button>
+		 <button class="btTemperatura3" id="rgbM">morna</button>
+		 <button class="btTemperatura4" id="rgbQ">quente</button>
+		 <button class="btTemperatura5" id="rgbMQ">muito quente</button>
+	</div>
+	<button class="jardim1"  onclick="jardim();"><img class="jardim1" id="gg" src="assets/img/jardim2.png"></button>
+	<button class="piscina1"  onclick="piscina();"><img class="piscina1" id="yy" src="assets/img/piscina2.png"></button>
+
+	<img class="separador" src="assets/img/img_pontilhado.png">
+	</body>
+
+
+	<script src="assets/js/app.js"></script>
+</html>
+,

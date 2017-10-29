@@ -1,0 +1,164 @@
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*fim do reset*/
+
+body {
+	
+	/*background-color: #001C26;*/
+	background-color: #00222A;
+	
+}
+
+.banheiro1 {
+	margin-top: 20px;
+	width: 100%;
+    height: 850px;
+	
+}
+.temperatura{
+	
+	text-align: center;
+	color:#FFFFFF;
+	font-size: 10em;
+	padding-bottom:20px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.jardim1 {
+	margin-top: 40px;
+	width: 100%;
+    height: 900px;
+	
+}
+
+.piscina1 {
+	margin-top: 40px;
+	width: 100%;
+    height: 900px;
+	
+}
+
+.btTemperatura1{
+	margin-left: 2%;
+	width:18%; 
+	background-color: #3333CC;
+	border-radius: 70px 0px 0px 70px;
+}
+.btTemperatura2{
+	width:20%; 
+	background-color: #3366cc;
+	
+}
+.btTemperatura3{
+	width:20%;
+	background-color: #DFDF33;
+}
+.btTemperatura4{
+	width:20%;
+	background-color: #CC6633;
+}
+.btTemperatura5{
+	width:18%; 
+	background-color: #CC3333;
+	border-radius: 0px 70px 70px 0px;
+}
+
+.separador{
+	width: 100%;
+    height: 85px;
+	padding-top: 20px;
+}
+
+.btn-group button {
+	width:96%
+	text-align: center;
+	height: 150px;
+	font-size: 2.3em;
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+	
+	border: none;
+}
+
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
